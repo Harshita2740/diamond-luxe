@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>𝔇𝔦𝔞𝔪𝔬𝔫𝔡 𝔩𝔲𝔵𝔢💎</title>
+  <link rel="stylesheet" href="headphone.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav>
+    <div class="logo">𝔇𝔦𝔞𝔪𝔬𝔫𝔡 𝔩𝔲𝔵𝔢💎 </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="slide">
+  <h1 class="brand-name">Diamond Luxe💎</h1>
+  <p class="tagline typewriter">Elegance in Every Carat</p>
+  <p>Explore our exquisite collection</p>
+  <button onclick="scrollToSection('collection')">View Collection</button>
+</section>
+
+<!-- About Section -->
+<section id="about" class="slide">
+  <h2>About Us</h2>
+  <p>Welcome to <strong>Diamond Luxe</strong> – where elegance meets excellence.</p>
+  <p>Our curated collection of rings, necklaces, and earrings showcases the finest craftsmanship in diamond jewelry.</p>
+  <p>We believe every jewel tells a story – of love, luxury, and legacy.</p>
+  <p>Founded with passion, we aim to bring timeless beauty into your lives through authentic and certified diamonds.</p>
+</section>
+
+<!-- Collection Section -->
+<section id="collection" class="slide">
+  <h2>Our Collections</h2>
+  <div class="collection-gallery">
+    <div class="item" onclick="openModal('ringModal')">
+      <img src="1673962109_d237e9feb935a9f44303.jpg" alt="Royal Diamond Ring" />
+      <p>Royal Diamond Ring</p>
+    </div>
+    <div class="item" onclick="openModal('necklaceModal')">
+      <img src="57.-Diamond-Jewellery-1024x1024.jpg" alt="Luxury Diamond Necklace" />
+      <p>Luxury Diamond Necklace</p>
+    </div>
+    <div class="item" onclick="openModal('earringModal')">
+      <img src="K82768s4.webp" alt="Elegant Diamond Earrings" />
+      <p>Elegant Diamond Earrings</p>
+    </div>
+  </div>
+
+  <!-- Ring Modal -->
+  <div id="ringModal" class="modal modalhidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Royal Diamond Ring Collection</h3>
+      <div class="modal-gallery">
+        <img src="YG1-362002.png" alt="Ring 1">
+        <img src="KIRK_KARA_K287R-B_K287RRcopy.jpg" alt="Ring 2">
+        <img src="503119FLRAA02.jpg" alt="Ring 3">
+        <img src="4922FMY_1.jpg" alt="Ring 4">
+        <img src="e1.webp" alt="Ring 1">
+        <img src="e2.jpeg" alt="Ring 2">
+        <img src="e3.jpg" alt="Ring 3">
+        <img src="e4.jpg" alt=" 4">
+        <img src="e5.webp" alt="Ring 1">
+        <img src="e6.webp" alt="Ring 2">
+        <img src="e7.jpg" alt="Ring 3">
+        <img src="e11.jpg" alt="Ring 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Necklace Modal -->
+  <div id="necklaceModal" class="modal modalhidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Luxury Diamond Necklace Collection</h3>
+      <div class="modal-gallery">
+        <img src="nec.jpg" alt="Necklace 1">
+        <img src="neck.webp" alt="Necklace 2">
+        <img src="neckl.jpeg" alt="Necklace 3">
+        <img src="neckle.jpg" alt="Necklace 4">
+        <img src="n1.png" alt="Necklace 1">
+        <img src="n2.webp" alt="Necklace 2">
+        <img src="n3.webp" alt="Necklace 3">
+        <img src="n4.webp" alt="Necklace 4">
+        <img src="n6.avif" alt="Necklace 1">
+        <img src="n7.jpg" alt="Necklace 2">
+        <img src="n8.jpeg" alt="Necklace 3">
+        <img src="n10.jpeg" alt="Necklace 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Earring Modal -->
+  <div id="earringModal" class="modal modalhidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Elegant Diamond Earring Collection</h3>
+      <div class="modal-gallery">
+        <img src="earring1.png" alt="Earring 1">
+        <img src="earring2.jpg" alt="Earring 2">
+        <img src="earring3.webp" alt="Earring 3">
+        <img src="earring4.jpg" alt="Earring 4">
+        <img src="earring5.jpeg" alt="Earring 1">
+        <img src="earring6.jpeg" alt="Earring 2">
+        <img src="earring7.jpg" alt="Earring 3">
+        <img src="earring8.webp" alt="Earring 4">
+        <img src="earring9.jpeg" alt="Earring 3">
+        <img src="earring10.avif" alt="Earring 4">
+        <img src="earring11.webp" alt="Earring 3">
+        <img src="earring12.webp" alt="Earring 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="slide">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <input type="tel" placeholder="Phone" required />
+    <button type="submit">Submit</button>
+  </form>
+  <div class="social-icons">
+    <a href="https://www.instagram.com"><img src="images (3).jpeg" alt="Instagram" width="40"></a>
+    <a href="https://www.facebook.com"><img src="Facebook_logo_(square).png" alt="Facebook" width="40"></a>
+    <a href="https://www.twitter.com"><img src="twit.jpeg" alt="Twitter" width="40"></a>
+  </div>
+</section>
+
+<script src="headphone.js"></script>
+</body>
+</html>

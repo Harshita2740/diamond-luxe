@@ -1,0 +1,748 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-image: url('gettyimages-1356412167-640x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bolder;
+
+
+}
+
+@keyframes logoGlow {
+  from {
+    text-shadow: 0 0 5px #e2c044;
+  }
+  to {
+    text-shadow: 0 0 20px #e2c044, 0 0 30px #ffd700;
+  }
+}
+.social-icons a:hover {
+  transform: scale(1.3) translateY(-5px);
+  color: #ffd700;
+}
+
+
+#home {
+  background-image: url('gettyimages-1356412167-640x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: right;
+  flex-direction: row;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-left.show, .slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.brand-name {
+  font-size: 150px;
+  font-style: oblique;
+  font-weight: bold;
+  margin: 20px 0;
+  color: rgb(233, 162, 8);
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+  animation: glow 2s ease-in-out infinite alternate;
+  display: inline-block;
+  
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(10, 8, 6, 0.8), 0 0 20px rgba(7, 7, 5, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgb(14, 14, 12), 0 0 30px rgba(2, 7, 8, 0.9), 0 0 40px rgba(5, 3, 1, 0.8);
+  }
+}
+
+.tagline {
+  font-size: 24px;
+  color: #0e0c01;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #fffacd;
+}
+.slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.item img {
+  transition: transform 0.3s ease;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.collection-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.item {
+  width: 200px;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.item p{
+  text-align: center;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #0f0e0d; 
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#collection {
+  background-image: url('Images-HD-Diamond-Pattern.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 30px;
+  font-style: italic;
+  ;
+  
+  
+}
+#contact {
+  background-image: url('top-view-blue-monday-concept-composition-with-telephone_23-2149139103.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: rgb(6, 7, 7); /* If background is dark */
+  font-size: 90px;
+  font-style:italic;
+}
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 32px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffcc00; /* Glow color on hover */
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-gallery img {
+  width: 100px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modalhidden {
+  display: none;
+}
+#about {
+  padding: 50px;
+  background-color:cadetblue;
+  text-align: center;
+  font-size: 45.5px;
+  color: #333;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button:active{
+  box-shadow: 0 0 15px 5px rgba(184, 173, 112, 0.8);
+  transform: scale(0.97); /* Optional: adds a tap-like press effect */
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end) infinite, blink 0.75s step-end infinite;
+  width: 0;
+  max-width: 100%;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+@keyframes logoGlow {
+  from {
+    text-shadow: 0 0 5px #e2c044;
+  }
+  to {
+    text-shadow: 0 0 20px #e2c044, 0 0 30px #ffd700;
+  }
+}
+
+.social-icons a:hover {
+  transform: scale(1.3) translateY(-5px);
+  color: #ffd700;
+}
+
+#home {
+  background-image: url('gettyimages-1356412167-640x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: right;
+  flex-direction: row;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-left.show, .slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.brand-name {
+  font-size: 150px;
+  font-style: oblique;
+  font-weight: bold;
+  margin: 20px 0;
+  color: rgb(233, 162, 8);
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+  animation: glow 2s ease-in-out infinite alternate;
+  display: inline-block;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(10, 8, 6, 0.8), 0 0 20px rgba(7, 7, 5, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgb(14, 14, 12), 0 0 30px rgba(2, 7, 8, 0.9), 0 0 40px rgba(5, 3, 1, 0.8);
+  }
+}
+
+.tagline {
+  font-size: 24px;
+  color: #0e0c01;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #fffacd;
+}
+
+button:active {
+  box-shadow: 0 0 15px 5px rgba(184, 173, 112, 0.8);
+  transform: scale(0.97);
+}
+
+.slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item img {
+  transition: transform 0.3s ease;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.collection-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.item {
+  width: 200px;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.item p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #0f0e0d;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#collection {
+  background-image: url('Images-HD-Diamond-Pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 30px;
+  font-style: italic;
+}
+
+#contact {
+  background-image: url('top-view-blue-monday-concept-composition-with-telephone_23-2149139103.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: rgb(6, 7, 7);
+  font-size: 90px;
+  font-style: italic;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 32px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-gallery img {
+  width: 100px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modalhidden {
+  display: none;
+}
+
+#about {
+  padding: 50px;
+  background-color: cadetblue;
+  text-align: center;
+  font-size: 45.5px;
+  color: #333;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end) infinite, blink 0.75s step-end infinite;
+  width: 0;
+  max-width: 100%;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
+/* ✅ Responsive Media Queries */
+@media (max-width: 1024px) {
+  .brand-name {
+    font-size: 80px;
+  }
+
+  .collection-gallery {
+    gap: 20px;
+  }
+
+  .item {
+    width: 180px;
+  }
+
+  #about {
+    font-size: 32px;
+  }
+
+  #contact {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .brand-name {
+    font-size: 60px;
+  }
+
+  .collection-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about {
+    font-size: 28px;
+  }
+
+  #contact {
+    font-size: 40px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 40px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  #about {
+    font-size: 22px;
+  }
+
+  #contact {
+    font-size: 28px;
+  }
+
+  .modal-gallery img {
+    width: 80px;
+  }
+}
